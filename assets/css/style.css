@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Candal&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffb6d9;;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  height: 600px;
+  align-items: center;
+  background-color: #ffcce6;
+  border: 3px solid #f06fb4;
+  border-radius: 30px;
+  flex-direction: column;
+  display: flex;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.02); /* Membesar 2% */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.judul{
+    text-align: center;
+    font-size: 50px;
+    margin-top: 20px;
+    color: #f06fb4;
+    font-family: 'Candal';
+    transition: transform 0.3s ease;
+    text-shadow:
+    -2px -2px 0 white,
+     2px -2px 0 white,
+    -2px  2px 0 white,
+     2px  2px 0 white;
+}
+
+.judul:hover{
+  transform: translateY(-5px); /* Animasi Menggeser Keatas */
+}
+
+.nama{
+    text-align: center;
+    font-size: 40px;
+    color: #f06fb4;
+    font-family: 'Candal';
+    margin-top: -35px;
+    transition: transform 0.3s ease;
+    text-shadow:
+    -2px -2px 0 white,
+     2px -2px 0 white,
+    -2px  2px 0 white,
+     2px  2px 0 white;   
+}
+
+.nama:hover{
+  transform: translateY(-6px); /* Animasi Menggeser Keatas */
+}
+
+.bulat{
+  width: 195px;
+  height: 205px;
+  border-radius: 100%;
+  border: 5px solid white;
+  transition: transform 0.4s ease;
+}
+
+.bulat:hover{
+  transform: scale(1.08);
+}
+
+img{
+  height: 205px;
+  width: 195px;
+  border-radius: 100px;
+}
+
+.img:hover{
+  transform: scale(1.05) rotate(3deg); /* Animasi Membesar dan Memutar */
+}
+
+.kotak1{
+  margin-right: 218px;
+  display: flex;
+  border-radius: 10px;  
+}
+
+.button {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+  background-color: #f06fb4;
+  border: 5px solid white;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #ffff;
+  gap: 10px;
+  margin: 20px;
+  font-weight: bold;
+  border: 3px solid #ffffff4d;
+  outline: none;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  border-color: #fff9;
+}
+
+.button:hover .icon {
+  transform: translate(4px);
+}
+
+.button:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}

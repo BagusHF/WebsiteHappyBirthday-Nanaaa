@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Candal&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #ffb6d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  height: 600px;
+  overflow: scroll;
+  align-items: center;
+  background-color: #ffcce6;
+  border: 3px solid #f06fb4;
+  border-radius: 30px;
+  flex-direction: column;
+  display: flex;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.kotak{
+  width: 94%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;  
+}
+
+/* Container Animasi */
+.container:hover {
+  transform: scale(1.02); /* Membesar 2% */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Teks Judul */
+.judul{
+    text-align: center;
+    font-size: 40px;
+    color: #f06fb4;
+    font-family: 'Candal';
+    transition: transform 0.3s ease;
+    text-shadow:
+    -2px -2px 0 white,
+     2px -2px 0 white,
+    -2px  2px 0 white,
+     2px  2px 0 white;
+}
+
+/* Teks Judul Animasi*/
+.judul:hover{
+  transform: translateY(-5px); /* Animasi Menggeser Keatas */
+}
+
+.card{
+  height: 150px;
+  box-shadow: 3px 3px 5px black;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+img{
+  height: 150px;
+  border-radius: 4px;
+}
+
+.intro{
+  height: 50px;
+  padding: 5px;
+  box-sizing: border-box;
+  position: absolute;
+  margin-top: -33px;
+  background: rgb(27, 27, 27,);
+  color: white;
+}
+
+h4{
+  margin: 3px;
+  font-size: 13px;
+  font-family: 'Tuffy';
+}
+
+.kotak-teks{
+  width: 93%;
+  text-shadow: 2px 2px 5px gray;
+  text-align: center;
+  font-family: 'Tuffy';
+  border-radius: 40px;
+  color: white;
+  margin-top: 10px;
+}
+
+/* Button */
+.button {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  padding-block: 0.5rem;
+  padding-inline: 1.25rem;
+  background-color: #f06fb4;
+  border: 5px solid white;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #ffff;
+  gap: 10px;
+  margin: 15px;
+  font-weight: bold;
+  border: 3px solid #ffffff4d;
+  outline: none;
+  overflow: hidden;
+  font-size: 15px;
+}
+
+/* Icon Tanda Panah */
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Button Animasi */
+.button:hover {
+  transform: scale(1.05);
+  border-color: #fff9;
+}
+
+.button:hover .icon {
+  transform: translate(4px);
+}
+
+.button:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
