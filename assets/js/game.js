@@ -19,7 +19,7 @@ const messages = [
     "terimaa kasihh yaa nanaa, karenaa kamuu udahh mauu dengerinn ceritaa-ceritaa hendraa🤗",
     "hendraaa ituu bersyukurr bangett punyaa kamuu. kamuuu ituu isimewaaa🌟",
     "terimaaa kasihh yaa nanaa udahh sabarr menghadapii sikapp-siapp hendraa✨",
-    "makasihhh yaa nanaaa udahh memberikann rasaa nyamann yangg hebatt, sehinggaa hendraa ndaaa tertarikk samaa perempuan lain",
+    "makasihhh yaa nanaaa udahh memberikann rasaa nyamann yangg hebatt, sehinggaa hendraa ndaaa tertarikk samaa perempuan lain💌",
     "hendraa bangga bangett punyaa ceweee sebaikkk kamuu, makasihhh yaa sayanggg💖",
     "terimaa kasihh yaa nanaa udahh mauu menerimaa hendraa, hendraa ndatauu apaa yangg hendraa lakukann sampaii bisaa seberuntunngg inii💌",
     "makasihh yaa nanaa udahh mauu perhatiannn samaaa hendraaa🫶",
