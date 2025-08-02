@@ -1,33 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Candal&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
-body {
+*{
+  box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-  background-color: #ffb6d9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  height: 600px;
-  overflow: scroll;
-  align-items: center;
-  background-color: #ffcce6;
-  border: 3px solid #f06fb4;
-  border-radius: 30px;
-  flex-direction: column;
-  display: flex;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+body {
+  background-color: #ffcce1;
 }
 
-.container:hover {
-  transform: scale(1.02); /* Membesar 2% */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffb6d3;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.menu-toggle {
+  display: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .judul{
@@ -35,6 +56,7 @@ body {
   font-family: 'Candal';
   color: #f06fb4;
   font-size: 30px;
+  margin-bottom: 15px;
   transition: transform 0.3s ease;
   text-shadow:
     -2px -2px 0 white,
@@ -43,8 +65,17 @@ body {
      2px  2px 0 white;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  box-sizing: border-box;
+}
+
 .judul:hover{
-  transform: translateY(-5px); /* Animasi Menggeser Keatas */
+  transform: translateY(-5px);
 }
 
 .typewriter{
@@ -114,14 +145,28 @@ button:hover {
   font-size: 15px;
 }
 
-/* Icon Tanda Panah */
-.icon {
-  width: 24px;
-  height: 24px;
-  transition: all 0.3s ease-in-out;
-}
-
 /* Button Animasi */
+@media (max-width: 768px){
+.nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: #ffb6d3;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    display: none;
+    padding: 1rem 2rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
 .button:hover {
   transform: scale(1.05);
   border-color: #fff9;
@@ -163,4 +208,5 @@ button:hover {
   to {
     left: 100%;
   }
+}
 }
